@@ -1,5 +1,6 @@
 package com.example.onetomanyspring.domain.department;
 
+import com.example.onetomanyspring.dto.DepartmentRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,5 +22,11 @@ public class Department {
 
     private Long departmentNumber;
 
-    private String departmentAdress;
+    private String departmentAddress;
+
+    public Department(DepartmentRequestDTO departmentDto) {
+        this.departmentNumber = departmentDto.departmentNumber();
+        this.departmentName = departmentDto.departmentName();
+        this.departmentAddress = departmentDto.departmentAddress();
+    }
 }
