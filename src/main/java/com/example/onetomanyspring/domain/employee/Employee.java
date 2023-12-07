@@ -1,5 +1,6 @@
 package com.example.onetomanyspring.domain.employee;
 
+import com.example.onetomanyspring.domain.department.Department;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +28,6 @@ public class Employee {
 
     @ManyToOne
     @JoinColumn(name = "department_id")
-    private Department department;s
+    private Department department;
 
 }
